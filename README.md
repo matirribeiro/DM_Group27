@@ -21,6 +21,16 @@ pip install -r requirements.txt
 
 ```
 data/acdc_dataset.csv   project dataset (separator ";")
-notebooks/              Jupyter notebooks
+data/acdc_clean.csv     cleaned dataset, produced by notebooks/drafts/eda_martim.ipynb
+notebooks/              Jupyter notebooks (drafts/ holds each member's working notebook)
 docs/                   planning documents
 ```
+
+Load the cleaned data with:
+
+```python
+pd.read_csv("data/acdc_clean.csv", sep=";",
+            parse_dates=["membership_start", "membership_end", "last_badge_swipe"])
+```
+
+An empty `membership_end` means the member is still active (data extracted on 2024-01-01).
