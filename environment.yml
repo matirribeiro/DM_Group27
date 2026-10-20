@@ -1,0 +1,25 @@
+# Conda environment for Group 27 (based on the course's setup/fall2627_env.yml)
+# Create:   conda env create -f environment.yml
+# Activate: conda activate dm_group27
+# Update:   conda env update -f environment.yml --prune
+name: dm_group27
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.12
+  - ipywidgets
+  - jupyter
+  - jupyterlab
+  - matplotlib
+  - numpy
+  - pandas
+  - scikit-learn>=1.7.1
+  - seaborn>=0.13.2
+  - minisom>=2.3.0
+  - ydata-profiling
+  - pip
+  - pip:
+      # bonus 3: interactive EDA dashboard
+      - streamlit
+      - plotly
