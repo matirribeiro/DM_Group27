@@ -34,3 +34,4 @@ pd.read_csv("data/acdc_clean.csv", sep=";",
 ```
 
 An empty `membership_end` means the member is still active (data extracted on 2024-01-01).
+`ltv_imputed` marks the rows whose `lifetime_value` was estimated as plan price × months.
