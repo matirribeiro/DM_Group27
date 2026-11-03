@@ -21,8 +21,8 @@ pip install -r requirements.txt
 
 ```
 data/acdc_dataset.csv   project dataset (separator ";")
-data/acdc_clean.csv     cleaned dataset, produced by notebooks/drafts/eda_martim.ipynb
-notebooks/              Jupyter notebooks (drafts/ holds each member's working notebook)
+data/acdc_clean.csv     cleaned dataset, produced by notebooks/Group27_EDA_Code.ipynb (section 10)
+notebooks/              Group27_EDA_Code.ipynb is the final notebook; drafts/ holds each member's working notebook
 docs/                   planning documents
 ```
 
