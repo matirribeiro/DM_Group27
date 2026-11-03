@@ -1,6 +1,5 @@
 from pathlib import Path
 
-import numpy as np
 import pandas as pd
 import plotly.express as px
 import streamlit as st
@@ -85,14 +84,14 @@ var = st.selectbox("Choose a variable", numeric_cols, index=numeric_cols.index("
 col_a, col_b = st.columns(2)
 
 fig_hist = px.histogram(filtered, x=var, nbins=40, title=f"Histogram of {var}")
-col_a.plotly_chart(fig_hist, use_container_width=True)
+col_a.plotly_chart(fig_hist, width="stretch")
 
 fig_box = px.box(
     filtered, x="plan_tier", y=var,
     category_orders={"plan_tier": PLAN_ORDER},
     title=f"{var} by plan tier",
 )
-col_b.plotly_chart(fig_box, use_container_width=True)
+col_b.plotly_chart(fig_box, width="stretch")
 
 #Category breakdown
 st.subheader("Category breakdown")
@@ -103,7 +102,7 @@ counts = filtered[cat].astype(str).value_counts().reset_index()
 counts.columns = [cat, "members"]
 
 fig_cat = px.bar(counts, x=cat, y="members", title=f"Members by {cat}")
-st.plotly_chart(fig_cat, use_container_width=True)
+st.plotly_chart(fig_cat, width="stretch")
 
 #Member table
 st.subheader("Member table")
