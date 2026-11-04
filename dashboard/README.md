@@ -4,13 +4,12 @@ Interactive EDA dashboard built with Streamlit and Plotly on the cleaned dataset
 
 ## How to run
 
-1. Update the repository (`git pull`) so that `data/acdc_clean.csv` exists.
-2. Activate the project environment.
-3. Install the dashboard dependencies:
+1. Extract `Group27_EDA_Bonus_Code.zip`. The `dashboard` and `data` folders must stay side by side.
+2. Install the dependencies:
    ```bash
    pip install -r dashboard/requirements.txt
    ```
-4. From the repository root, start the app:
+3. From the extracted folder, start the app:
    ```bash
    streamlit run dashboard/app.py
    ```
